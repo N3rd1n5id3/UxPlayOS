@@ -1,0 +1,13 @@
+[Unit]
+Description=UxPlay
+Documentation=https://github.com/antimof/UxPlay
+After=network-online.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/uxplay -nh -fs
+Restart=on-failure
+User=pi
+
+[Install]
+WantedBy=multi-user.target
